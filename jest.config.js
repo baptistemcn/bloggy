@@ -5,8 +5,9 @@ const createJestConfig = nextJest({
 });
 
 const customJestConfig = {
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jsdom",
+  coveragePathIgnorePatterns: ["index.ts"],
 };
 
 module.exports = createJestConfig(customJestConfig);
