@@ -18,7 +18,7 @@ export const Divider = (props: DividerProps) => {
   return (
     <div
       className={clsx(
-        "flex flex-row items-center px-4 h-12 rounded-xl bg-green",
+        "flex flex-row items-center px-4 h-12 rounded-xl bg-green shadow-lg",
         center,
       )}
       data-testid={testID}
