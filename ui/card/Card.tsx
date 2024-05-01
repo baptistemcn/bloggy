@@ -11,7 +11,7 @@ export const Card = (props: CardProps) => {
   const { children, className, testID = "card" } = props;
 
   return (
-    <div className={clsx("p-4 rounded", className)} data-testid={testID}>
+    <div className={clsx(className)} data-testid={testID}>
       {children}
     </div>
   );
