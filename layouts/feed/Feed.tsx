@@ -2,18 +2,20 @@
 
 import { FullCard, ListLabels, TitleCard } from "@/components";
 import { Article } from "@/interfaces";
-import { useArticlesQuery } from "@/queries";
+import { useArticleQuery, useArticlesQuery } from "@/queries";
 import { Divider } from "@/ui";
+import { FeedList } from "../feed-list";
+import { FeedPopular } from "../feed-popular";
 
 export const Feed = () => {
-  const [articlesInfo] = useArticlesQuery();
-
-  const { data, isLoading } = articlesInfo;
-
   return (
     <div>
       <div className="m-4">
-        <TitleCard author="author" label="label" title="title" />
+        <FeedPopular
+          slug={
+            "Ill-quantify-the-redundant-TCP-bus-that-should-hard-drive-the-ADP-bandwidth!-553"
+          }
+        />
       </div>
       <div className="m-4">
         <Divider title="Categories" />
@@ -25,19 +27,7 @@ export const Feed = () => {
         <Divider title="Title" full />
       </div>
       <div className="m-4">
-        {isLoading && <p>Loading...</p>}
-
-        {data?.articles?.map((article: Article) => (
-          <div className="my-4" key={article.slug}>
-            <FullCard
-              author={article.author.username}
-              date={article.createdAt}
-              description={article.description}
-              label={article.tagList[0]}
-              title={article.title}
-            />
-          </div>
-        ))}
+        <FeedList />
       </div>
     </div>
   );
