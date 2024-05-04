@@ -1,0 +1,1 @@
+export { FeedPopular } from "./FeedPopular";
