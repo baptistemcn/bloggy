@@ -1,1 +1,1 @@
-export { type Article } from "./articles.interface";
+export { type Article, type Articles } from "./articles.interface";
