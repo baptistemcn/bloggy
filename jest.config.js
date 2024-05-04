@@ -7,7 +7,16 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jsdom",
-  coveragePathIgnorePatterns: ["index.ts"],
+  coveragePathIgnorePatterns: [
+    "index.ts",
+    "config",
+    "queries",
+    "repositories",
+    "providers",
+  ],
+  moduleNameMapper: {
+    "@/queries/(.*)": "<rootDir>/queries/$1",
+  },
 };
 
 module.exports = createJestConfig(customJestConfig);
