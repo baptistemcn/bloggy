@@ -9,8 +9,10 @@ interface DevModeProviderProps {
 export const DevModeProvider = (props: DevModeProviderProps) => {
   return (
     <>
-      {props.env === "development"} ? {props.children}
-      <ReactQueryDevtools initialIsOpen={false} /> : <></>
+      {props.children}
+      {props.env === "development" && (
+        <ReactQueryDevtools initialIsOpen={false} />
+      )}
     </>
   );
 };
