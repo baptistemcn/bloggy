@@ -1,9 +1,9 @@
-import Image from "next/image";
+import { Feed } from "@/layouts";
 
 export default function Home() {
   return (
-    <main className="flex flex-row items-center justify-center min-h-screen">
-      <h1>Bloggy</h1>
+    <main className="flex flex-col items-center min-h-screen">
+      <Feed />
     </main>
   );
 }
