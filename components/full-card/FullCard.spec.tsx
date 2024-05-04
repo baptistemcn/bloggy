@@ -5,7 +5,7 @@ const author = "mock author";
 const label = "mock label";
 const title = "mock title";
 const description = "mock description";
-const date = "mock date";
+const date = "2024-01-04T00:52:58.601Z";
 
 describe("Full Card component", () => {
   let spy: jest.SpyInstance;
@@ -71,7 +71,7 @@ describe("Full Card component", () => {
       <FullCard {...{ author, label, title, description, date }} />,
     );
 
-    const dateElement = getByText("mock date");
+    const dateElement = getByText("January 4, 2024");
 
     expect(dateElement).toBeTruthy();
     expect(dateElement).toBeInTheDocument();

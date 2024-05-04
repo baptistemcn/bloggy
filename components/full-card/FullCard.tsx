@@ -1,4 +1,5 @@
 import { ReImage } from "@/ui";
+import { convertDate } from "@/utils";
 
 interface FullCardProps {
   label: string;
@@ -24,8 +25,8 @@ export const FullCard = (props: FullCardProps) => {
           </p>
         </div>
         <div className="my-1">
-          <p className="text-wrap">{props.description.slice(0, 50) + "..."}</p>
-          <p>{props.date}</p>
+          <p className="text-wrap">{props.description.slice(0, 70) + "..."}</p>
+          <p className="my-2">{convertDate(props.date)}</p>
         </div>
       </div>
     </div>
