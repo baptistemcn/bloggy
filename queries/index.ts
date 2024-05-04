@@ -1,1 +1,1 @@
-export { useArticlesQuery } from "./articles";
+export { useArticleQuery, useArticlesQuery } from "./articles";

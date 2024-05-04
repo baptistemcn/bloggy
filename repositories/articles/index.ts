@@ -1,1 +1,1 @@
-export { getArticles } from "./articles.repository";
+export { getArticle, getArticles } from "./articles.repository";

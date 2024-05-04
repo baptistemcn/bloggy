@@ -6,3 +6,10 @@ export const getArticles = async () => {
     url: "/articles",
   });
 };
+
+export const getArticle = async (slug: string) => {
+  return await apiClient({
+    method: "get",
+    url: "/articles/" + slug,
+  });
+};

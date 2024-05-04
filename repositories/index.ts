@@ -1,2 +1,2 @@
-export { getArticles } from "./articles";
+export { getArticle, getArticles } from "./articles";
 export { apiClient } from "./apiClient";
